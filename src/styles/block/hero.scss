@@ -1,0 +1,22 @@
+.hero {
+    background-image: url('../images/fon.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+
+    width: 100vw;
+    height: 100vh;
+
+    &__contanier {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__txt-block {
+
+        & h1 {
+            font-size: 5rem;
+            line-height: 100%;
+        }
+    }
+}
