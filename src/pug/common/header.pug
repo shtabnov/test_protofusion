@@ -1,0 +1,19 @@
+header.header 
+    .header__wrapper 
+        .header__logo
+            img(src="images/logo.svg", alt="Logo Company")
+        nav.header__nav 
+            ul.header__list 
+                each val in ['Products', 'Prices', 'Security', 'Resources']
+                    li.header__item 
+                        a(href="#" + val).header__link.link=val
+        .header__control
+            button.header__button Log in
+            select.header__language(name="" id="input0" required="required")
+                option(value="rus") rus
+                option(value="eng") eng
+                option(value="ua") ua
+                option(value="bu") bu
+            form
+                input(type="search" name="q" placeholder="Поиск по сайту")
+                input(type="submit" value="Найти")

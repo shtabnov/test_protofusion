@@ -9,6 +9,6 @@ module.exports = function server () {
         }
     });
 
-    gulp.watch("./build/*.html").on("change", reload);
-    gulp.watch("./build/css/*.css").on("change", reload);
+    gulp.watch("build/*.html").on("change", reload);
+    gulp.watch("build/css/*.css").on("change", reload);
 };
