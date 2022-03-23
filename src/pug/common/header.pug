@@ -9,11 +9,13 @@ header.header
                         a(href="#" + val).header__link.link=val
         .header__control
             button.header__button Log in
-            select.header__language(name="" id="input0" required="required")
-                option(value="rus") rus
-                option(value="eng") eng
-                option(value="ua") ua
-                option(value="bu") bu
-            form
-                input(type="search" name="q" placeholder="Поиск по сайту")
-                input(type="submit" value="Найти")
+            select.header__language(name="lang" id="lang" required="required")
+                option(value="rus") Russian
+                option(value="eng" selected="selected") English
+                option(value="ua") Ukrainian
+                option(value="bu") Belorussian
+            .header__search-button
+            .header__search.header__search_active
+                form
+                    input(type="text" name="search" placeholder="Search")
+                    button(type="submit")

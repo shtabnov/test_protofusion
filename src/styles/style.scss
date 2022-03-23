@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css');
+@import 'common/variables';
 @import 'common/_global';
 @import 'common/mixins';
-@import 'common/variables';
 @import 'block/header.scss';
 @import 'block/hero.scss';
