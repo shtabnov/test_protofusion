@@ -1,21 +1,21 @@
-header.header 
-    .header__wrapper 
-        .header__logo
-            img(src="images/logo.svg", alt="Logo Company")
-        nav.header__nav 
-            ul.header__list 
-                each val in ['Products', 'Prices', 'Security', 'Resources']
-                    li.header__item 
-                        a(href="#" + val).header__link.link=val
-        .header__control
-            button.header__button Log in
-            select.header__language(name="lang" id="lang" required="required")
-                option(value="rus") Russian
-                option(value="eng" selected="selected") English
-                option(value="ua") Ukrainian
-                option(value="bu") Belorussian
-            .header__search-button
-            .header__search.header__search_active
-                form
-                    input(type="text" name="search" placeholder="Search")
-                    button(type="submit")
+header.header
+    .header__container
+        .header__wrapper 
+            a.header__logo(href="#")
+                img(src="images/logo.svg", alt="Logo Company")
+            nav.header__nav 
+                ul.header__list 
+                    each val in ['Products', 'Prices', 'Security', 'Resources']
+                        li.header__item 
+                            a(href="#" + val).header__link.link=val
+            .header__control
+                button.header__button Log in
+                select.header__language(name="lang" id="lang" required="required")
+                    option(value="rus") Russian
+                    option(value="eng" selected="selected") English
+                    option(value="ua") Ukrainian
+                    option(value="bu") Belorussian
+                .header__search-button
+                .header__search.search
+                    input.search__form(type="text" name="search" placeholder="Search")
+                    button.search__button(type="submit")

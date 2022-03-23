@@ -1,13 +1,13 @@
 let searchButton = document.querySelector('.header__search-button');
-let searchForm =  document.querySelector('.header__search');
+let searchForm =  document.querySelector('.search');
 
 searchButton.addEventListener('click', () => {
-    searchForm.classList.toggle('header__search_active')
+    searchForm.classList.toggle('search_active')
 })
 
-// window.addEventListener('click', (event) => {
-//     if (event.target != searchForm ||
-//         event.target != searchButton) {
-//         searchForm.classList.remove('header__search_active')
-//     }
-// })
+document.addEventListener('click', (e) => {
+    if (!e.target.matches('.search, .search *, .header__search-button')) {
+        searchForm.classList.remove('search_active')      
+    } 
+    e.stopPropagation();
+})

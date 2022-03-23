@@ -1,13 +1,16 @@
 .header {
-    position: absolute;
-    top: 0;
-    left: 0;
     padding-top: 79px;
 
+    &__container {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
     &__wrapper {
-        margin-left: 19.7%;
+        margin-left: 16vw;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__logo {
@@ -56,6 +59,7 @@
         display: flex;
         list-style: none;
         align-items: center;
+        margin-right: 25px;
     }
     
     &__button {
@@ -77,47 +81,8 @@
         content: url('../images/search.svg');
         cursor: pointer;
     }
-
-    &__search {
-        position: relative;
-        transform: scale(0);
-        transition: 0.5s;
-
-        &_active {
-            transform: scale(1);
-            transition: 0.5s;
-        }
-
-        & input, button {
-            position: absolute;
-            border: none;
-            outline: none;
-        }
-
-        & input {
-            padding-left: 38px;
-            font: normal normal normal 20px/30px Poppins;
-            letter-spacing: 0px;
-            color: #707070;
-            top: 50px;
-            left: -350px;
-            width: 330px;
-            height: 55px;
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            box-shadow: 0px 0px 10px #007DFB;
-            border-radius: 28px;
-        }
-
-        & button {
-            top: 70px;
-            left: -20px;
-            height: 16px;
-            width: 16px;
-            background: url('../images/search.svg') 50% 50% no-repeat;
-            cursor: pointer;
-        }
-    }  
 }
+
 .choices {
     width: 114px;
     margin: 0;
@@ -141,6 +106,7 @@
         border: 1px solid #FFFFFF73;
         border-radius: 42px;
         backdrop-filter: blur(20px);
+        right: -50%;
     }
 
     .choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
@@ -180,3 +146,198 @@
         transition: 10ms;
     }
 }
+
+.search {
+    position: relative;
+    transform: scale(0);
+    transition: 0.5s;
+
+    &_active {
+        transform: scale(1);
+        transition: 0.5s;
+    }
+
+    & input, button {
+        position: absolute;
+        border: none;
+        outline: none;
+    }
+
+    & input {
+        padding-left: 38px;
+        font: normal normal normal 20px/30px Poppins;
+        letter-spacing: 0px;
+        color: #707070;
+        top: 50px;
+        left: -350px;
+        width: 330px;
+        height: 55px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 10px #007DFB;
+        border-radius: 28px;
+    }
+
+    & button {
+        top: 70px;
+        left: -20px;
+        height: 16px;
+        width: 16px;
+        background: url('../images/search.svg') 50% 50% no-repeat;
+        cursor: pointer;
+    }
+}  
+
+@media (max-width: 1880px) {
+    .header {
+
+        &__wrapper {
+            margin-left: 13vw;
+        }
+
+        &__logo {
+            margin-right: 130px;
+        }
+
+        &__nav {
+            margin-right: 140px;
+        }
+    }
+}
+
+@media (max-width: 1650px) {
+    .header {
+        padding-top: 60px;
+
+        &__wrapper {
+            margin-left: 9vw;
+        }
+
+        &__logo {
+            margin-right: 90px;
+        }
+
+        &__nav {
+            margin-right: 100px;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .header {
+        padding-top: 50px;
+
+        &__wrapper {
+            margin-left: 4vw;
+        }
+
+        &__logo {
+            margin-right: 50px;
+        }
+
+        &__nav {
+            margin-right: 0px;
+        }
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .header {
+        padding-top: 30px;
+
+        &__wrapper {
+            margin-left: 4vw;
+        }
+
+        &__logo {
+            margin-right: 50px;
+        }
+
+        &__nav {
+            margin-right: 0px;
+        }
+
+        &__item {
+            font-size: 16px;
+            margin-right: 42px;
+
+            &:last-child {
+    
+                &::after {
+                    content: url('../images/arrow_n.svg');
+                    cursor: pointer;
+                    height: 28px;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        &__button {
+            margin-right: 18px;
+            padding: 17px 37px;
+            font: normal normal normal 16px/100% Poppins;
+            letter-spacing: 0px;
+            white-space: pre;
+            color: $black_00;
+            outline: none;
+            border: none;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 0px 10px #0000001A;
+            border-radius: 28px;
+            cursor: pointer;
+        }
+    }
+    .choices {
+        width: 94px;
+        margin: 0;
+        margin-right: 26px;
+    
+        &__inner {
+            font: normal normal normal 16px/33px Poppins;
+        }
+    }
+    .search {
+        position: relative;
+        transform: scale(0);
+        transition: 0.5s;
+    
+        &_active {
+            transform: scale(1);
+            transition: 0.5s;
+        }
+    
+        & input, button {
+            position: absolute;
+            border: none;
+            outline: none;
+        }
+    
+        & input {
+            padding-left: 28px;
+            font: normal normal normal 16px/30px Poppins;
+            letter-spacing: 0px;
+            color: #707070;
+            top: 50px;
+            left: -275px;
+            width: 260px;
+            height: 55px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 0px 10px #007DFB;
+            border-radius: 28px;
+        }
+    
+        & button {
+            top: 70px;
+            left: -20px;
+            height: 16px;
+            width: 16px;
+            background: url('../images/search.svg') 50% 50% no-repeat;
+            cursor: pointer;
+        }
+    } 
+}
+
+@media (max-width: 1024px) {
+
+}
+
+
