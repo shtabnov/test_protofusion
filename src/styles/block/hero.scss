@@ -1,22 +1,48 @@
 .hero {
-    background-image: url('../images/fon.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
 
-    width: 100vw;
-    height: 100vh;
-
-    &__contanier {
-        max-width: 1200px;
+    &__wrapper {
+        max-width: 685px;
         margin: 0 auto;
-    }
-
-    &__txt-block {
+        margin-top: 7%;
 
         & h1 {
-            font-size: 5rem;
-            line-height: 100%;
+            margin-bottom: 37px;
+            text-align: center;
+            font: normal normal bold 96px/110px Poppins;
+            letter-spacing: 0px;
+        }
+
+        & p {
+            text-align: center;
+            font: normal normal normal 22px/27px Poppins;
+            letter-spacing: 0px;
+            color: $blue;
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .hero {
+
+        &__wrapper {
+            max-width: 685px;
+            margin: 0 5px;
+            margin-top: 15%;
+
+    
+            & h1 {
+                margin-bottom: 27px;
+                text-align: center;
+                font: normal normal bold 46px/50px Poppins;
+                letter-spacing: 0px;
+            }
+    
+            & p {
+                text-align: center;
+                font: normal normal normal 14px/27px Poppins;
+                letter-spacing: 0px;
+                color: $blue;
+            }
         }
     }
 }
