@@ -10,6 +10,21 @@
         margin-left: 16vw;
         display: flex;
         align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & > input, label {
+            display: none;
+        }
+    }
+
+    &__hidden-menu {
+        display: flex;
+        align-items: center;
         justify-content: space-between;
     }
 
@@ -385,13 +400,58 @@
         padding-top: 30px;
     
         &__wrapper {
+            margin-left: 10vw;
+        }
+
+        &__menu {
+
+            & > label {
+                display: block;
+                position: fixed;
+                visibility: visible;
+                z-index: 5;
+                right: 20px;
+                top: 30px;
+                width: 30px;
+                // height: 30px;
+                
+                & span {
+                    display: block;
+                    visibility: visible;
+                    width: 30px;
+                    height: 4px;
+                    background-color: $black_00;
+                    border-radius: 2px;
+                    margin-bottom: 5px;
+                    z-index: 6;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                }
+            }
+
+            & > input {
+                
+                &:checked ~ .header__hidden-menu {
+                    visibility: visible;
+                }
+
+                &:checked ~ label > span {
+                    background-color: $blue;
+                }
+            }
+        }
+
+        &__hidden-menu {
             visibility: hidden;
             padding-left: 20px;
             padding-top: 20px;
             position: absolute;
             top: 0;
             right: 0;
-            width: 85vw;
+            width: 90vw;
             height: 90vh;
             display: flex;
             flex-direction: column;
@@ -399,21 +459,25 @@
             justify-content: space-between;
             background: #FFFFFF7F 0% 0% no-repeat padding-box;
             backdrop-filter: blur(50px);
-            -webkit-backdrop-filter: blur(50px);
+
         }
     
         &__logo {
-            flex: 0 0 0;
+            position: fixed;
+            visibility: visible;
             display: flex;
             align-items: center;
-            margin-right: auto;
-            margin-bottom: 30px;
+            // margin-right: auto;
+            // margin-bottom: 30px;
+            padding-top: 22px;
+            z-index: 5;
         }
     
         &__nav {
             flex: 1 0 auto;
             position: relative;
             margin-right: auto;
+            padding-top: 60px;
         }
     
         &__list {
@@ -453,13 +517,15 @@
         &__control {
             flex: 0 0 auto;
             display: flex;
+            width: 100%;
             list-style: none;
             align-items: center;
             justify-content: space-between;
-            margin-right: 0;
+            margin-right: 5px;
         }
         
         &__button {
+            flex: 0 1 auto;
             margin-right: 5px;
             padding: 17px 37px;
             font: normal normal normal 20px/100% Poppins;
@@ -475,12 +541,14 @@
         }
     
         &__search-button {
+            flex: 0 1 auto;
             content: url('../images/search.svg');
             cursor: pointer;
         }
     }
     
     .choices {
+        flex: 0 1 auto;
         width: 114px;
         margin: 0;
         margin-right: 5px;
@@ -499,7 +567,7 @@
             padding-top: 24px;
             padding-left: 18px;
             width: 176px;
-            background: #FFFFFF00 0% 0% no-repeat padding-box;
+            background: $gray_01 0% 0% no-repeat padding-box;
             border: 1px solid #FFFFFF73;
             border-radius: 42px;
             backdrop-filter: blur(20px);
@@ -566,8 +634,8 @@
             letter-spacing: 0px;
             color: #707070;
             top: -100px;
-            left: -336px;
-            width: 80vw;
+            left: -84vw;
+            width: 70vw;
             height: 55px;
             background: #FFFFFF 0% 0% no-repeat padding-box;
             box-shadow: 0px 0px 10px #007DFB;
@@ -576,7 +644,7 @@
     
         & button {
             top: -78px;
-            left: -45px;
+            left: -14vw;
             height: 16px;
             width: 16px;
             background: url('../images/search.svg') 50% 50% no-repeat;
@@ -587,7 +655,7 @@
     .resources {
         display: none;
         position: absolute;
-        top: 150px;
+        top: 210px;
         left: 50%;
         transform: translate(-50%);
         transition: 0.3s;

@@ -2,38 +2,45 @@ header.header
     .header__wrapper 
         a.header__logo(href="#")
             img(src="images/logo.svg", alt="Logo Company")
-        nav.header__nav 
-            ul.header__list 
-                li.header__item 
-                    a(href="#Products").header__link.link Products
-                li.header__item 
-                    a(href="#Prices").header__link.link Prices
-                li.header__item 
-                    a(href="#Security").header__link.link Security
-                li.header__item
-                    a(href="#Resources").header__link.link Resources
-                    .resources(id="Resources") 
-                        ul.resources__list
-                            li.resources__item 
-                                a.resources__link(href="#") About
-                                p.resources__decription We aim to continuously refine our services in highly dynamic industry.
-                            li.resources__item 
-                                a.resources__link(href="#") Careers
-                                p.resources__decription Come join our team and help us build the future.
-                            li.resources__item 
-                                a.resources__link(href="#") Support
-                                p.resources__decription Answers to FAQs and how to contact our customer service team.
-                            li.resources__item 
-                                a.resources__link(href="#") Blog
-                                p.resources__decription Aroduct announcements, company updates, and industry perspectives.
-        .header__control
-            button.header__button Log in
-            select.header__language(name="lang" id="lang" required="required")
-                option(value="rus") Russian
-                option(value="eng" selected="selected") English
-                option(value="ua") Ukrainian
-                option(value="bu") Belorussian
-            .header__search-button
-            .header__search.search
-                input.search__form(type="text" name="search" placeholder="Search")
-                button.search__button(type="submit")
+        .header__menu
+            input(id="toggle" type="checkbox")
+            label(class="toggle-container" for="toggle")
+                span 
+                span 
+                span 
+            .header__hidden-menu
+                nav.header__nav 
+                    ul.header__list 
+                        li.header__item 
+                            a(href="#Products").header__link.link Products
+                        li.header__item 
+                            a(href="#Prices").header__link.link Prices
+                        li.header__item 
+                            a(href="#Security").header__link.link Security
+                        li.header__item
+                            a(href="#Resources").header__link.link Resources
+                            .resources(id="Resources") 
+                                ul.resources__list
+                                    li.resources__item 
+                                        a.resources__link(href="#") About
+                                        p.resources__decription We aim to continuously refine our services in highly dynamic industry.
+                                    li.resources__item 
+                                        a.resources__link(href="#") Careers
+                                        p.resources__decription Come join our team and help us build the future.
+                                    li.resources__item 
+                                        a.resources__link(href="#") Support
+                                        p.resources__decription Answers to FAQs and how to contact our customer service team.
+                                    li.resources__item 
+                                        a.resources__link(href="#") Blog
+                                        p.resources__decription Aroduct announcements, company updates, and industry perspectives.
+                .header__control
+                    button.header__button Log in
+                    select.header__language(name="lang" id="lang" required="required")
+                        option(value="rus") Russian
+                        option(value="eng" selected="selected") English
+                        option(value="ua") Ukrainian
+                        option(value="bu") Belorussian
+                    .header__search-button
+                    .header__search.search
+                        input.search__form(type="text" name="search" placeholder="Search")
+                        button.search__button(type="submit")
