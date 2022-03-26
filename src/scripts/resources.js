@@ -6,7 +6,8 @@ for (let link of linksNav) {
         let obj = document.getElementById(attribute);
         if (obj) {
             let position = window.getComputedStyle(obj).display
-            position == 'block' ? obj.style.display = 'none' : obj.style.display = 'block'
+            position == 'block' ? obj.style.display = 'none' : obj.style.display = 'block';
         }
     })
 }
+

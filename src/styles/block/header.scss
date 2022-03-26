@@ -36,7 +36,7 @@
 
     &__nav {
         position: relative;
-        margin-right: 210px;
+        margin-right: 200px;
     }
 
     &__list {
@@ -312,7 +312,7 @@
         }
 
         &__nav {
-            margin-right: 0px;
+            margin-right: auto;
         }
 
         &__item {
@@ -476,7 +476,7 @@
         &__nav {
             flex: 1 0 auto;
             position: relative;
-            margin-right: auto;
+            margin-right: 0vw;
             padding-top: 60px;
         }
     
