@@ -10,9 +10,11 @@
         margin-left: 16vw;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__menu {
+        flex: 1 1 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -29,6 +31,7 @@
     }
 
     &__logo {
+        flex: 0 0 auto;
         display: flex;
         align-items: center;
         margin-right: 150px;
@@ -36,7 +39,7 @@
 
     &__nav {
         position: relative;
-        margin-right: 200px;
+        // margin-right: 200px;
     }
 
     &__list {
@@ -253,13 +256,13 @@
             margin-left: 13vw;
         }
 
-        &__logo {
-            margin-right: 130px;
-        }
+        // &__logo {
+        //     margin-right: 130px;
+        // }
 
-        &__nav {
-            margin-right: 140px;
-        }
+        // &__nav {
+        //     margin-right: 140px;
+        // }
     }
 }
 
@@ -270,14 +273,6 @@
         &__wrapper {
             margin-left: 9vw;
         }
-
-        &__logo {
-            margin-right: 90px;
-        }
-
-        &__nav {
-            margin-right: 100px;
-        }
     }
 }
 
@@ -287,14 +282,6 @@
 
         &__wrapper {
             margin-left: 4vw;
-        }
-
-        &__logo {
-            margin-right: 50px;
-        }
-
-        &__nav {
-            margin-right: 0px;
         }
     }
 }
@@ -401,6 +388,7 @@
     
         &__wrapper {
             margin-left: 10vw;
+            justify-content: flex-start;
         }
 
         &__menu {
@@ -448,6 +436,7 @@
             visibility: hidden;
             padding-left: 20px;
             padding-top: 20px;
+            padding-bottom: 20px;
             position: absolute;
             top: 0;
             right: 0;
