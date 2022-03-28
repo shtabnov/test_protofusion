@@ -8,12 +8,49 @@
     display: none;
     width: 100%;
     height: 100%;
-    padding-left: 200px;
     background-color: $white;
-    // background-image: url('../images/clip_bg.svg');
-    // background-repeat: no-repeat;
-    // background-position: top right;
+
+    &__block {
+        padding-top: 79px;
+        margin-left: 300px;
+    }
+
+    &__img {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__close {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 70px;
+        right: 70px;
+        z-index: 10;
+    
+        & > span {
+            display: block;
+            position: absolute;
+            top: 18px;
+            width: 40px;
+            height: 3px;
+            background-color: $blue;
+
+            &:first-child {
+                transform: rotate(45deg);
+            }
+
+            &:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
     &__heading {
+        margin-top: 77px;
+        margin-bottom: 42px;
         font: normal normal medium 25px/38px Poppins;
         letter-spacing: 0px;
     }
@@ -22,11 +59,39 @@
         display: flex;
         flex-direction: column;
         max-width: 640px;
+
+        & input {
+            padding: 21px 48px; 
+            margin-bottom: 20px;
+            text-align: left;
+            font: normal normal normal 25px/38px Poppins;
+            letter-spacing: 0px;
+            color: $gray;
+            background: $white-gray 0% 0% no-repeat padding-box;
+            border-radius: 52px;
+            border: none;
+            outline: none;
+        }
+
+        & button {
+            margin-top: 65px;
+            width: 332px;
+            padding: 43.5px 80px;
+            text-align: left;
+            font: normal normal normal 30px/36px Poppins;
+            letter-spacing: 0px;
+            color: $white;
+            background: #007DFB 0% 0% no-repeat padding-box;
+            border-radius: 62px;
+            border: none;
+        }
     }
 }
 
-svg {
-    position: absolute;
-    top: 0; 
-    right: 0;
+@media (max-width: 1020px) {
+
+#theClippingPath {
+    transform: rotate(0deg) translate(50%, 0%);
+}
+
 }

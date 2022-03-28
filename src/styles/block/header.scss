@@ -39,7 +39,7 @@
 
     &__nav {
         position: relative;
-        // margin-right: 200px;
+        margin-right: 2vw;
     }
 
     &__list {
@@ -121,7 +121,7 @@
         padding-top: 24px;
         padding-left: 18px;
         width: 176px;
-        background: #FFFFFF00 0% 0% no-repeat padding-box;
+        background: $black_03 0% 0% no-repeat padding-box;
         border: 1px solid #FFFFFF73;
         border-radius: 42px;
         backdrop-filter: blur(20px);
@@ -255,14 +255,6 @@
         &__wrapper {
             margin-left: 13vw;
         }
-
-        // &__logo {
-        //     margin-right: 130px;
-        // }
-
-        // &__nav {
-        //     margin-right: 140px;
-        // }
     }
 }
 
@@ -401,9 +393,8 @@
                 right: 20px;
                 top: 30px;
                 width: 30px;
-                // height: 30px;
                 
-                & span {
+                & > span {
                     display: block;
                     visibility: visible;
                     width: 30px;
@@ -456,8 +447,6 @@
             visibility: visible;
             display: flex;
             align-items: center;
-            // margin-right: auto;
-            // margin-bottom: 30px;
             padding-top: 22px;
             z-index: 5;
         }
