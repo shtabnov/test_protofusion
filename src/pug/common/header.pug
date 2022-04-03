@@ -35,11 +35,8 @@ header.header
                                         p.resources__decription Aroduct announcements, company updates, and industry perspectives.
                 .header__control
                     button.header__button Log in
-                    select.header__language(name="lang" id="lang" required="required")
-                        option(value="rus") Russian
-                        option(value="eng" selected="selected") English
-                        option(value="ua") Ukrainian
-                        option(value="bu") Belorussian
+                    .header__select
+                        include ../includes/language.pug
                     .header__search-button
                     .header__search.search
                         input.search__form(type="text" name="search" placeholder="Search")
