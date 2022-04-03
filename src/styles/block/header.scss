@@ -194,6 +194,28 @@
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 0px 10px #007DFB;
         border-radius: 28px;
+
+        &:focus {
+            box-shadow: 0px 0px 10px #00000033;
+            border: 1px solid #007DFB;
+            color: $black_00;
+
+            &::-webkit-input-placeholder {
+                color: transparent;
+            }
+              
+            &::-moz-placeholder {
+                color: transparent;
+            }
+              
+            &:-moz-placeholder {
+                color: transparent;
+            }
+              
+            &:-ms-input-placeholder {
+                color: transparent;
+            }
+        }
     }
 
     & button {

@@ -71,6 +71,28 @@
             border-radius: 52px;
             border: none;
             outline: none;
+
+            &:focus {
+                box-shadow: 0px 0px 10px #00000033;
+                border: 1px solid #007DFB;
+                color: $black_00;
+    
+                &::-webkit-input-placeholder {
+                    color: transparent;
+                }
+                  
+                &::-moz-placeholder {
+                    color: transparent;
+                }
+                  
+                &:-moz-placeholder {
+                    color: transparent;
+                }
+                  
+                &:-ms-input-placeholder {
+                    color: transparent;
+                }
+            }   
         }
 
         & button {
@@ -94,7 +116,6 @@ svg {
 
     & image {
         width: 100vw;
-        x: -62vw;
     }
 }
 
@@ -109,9 +130,11 @@ svg {
         &__form {
             display: flex;
             flex-direction: column;
+            align-items: center;
             max-width: 100vw;
 
             & input {
+                width: 70vw;
                 padding: 13px 28px; 
                 margin-bottom: 20px;
                 text-align: left;
@@ -125,9 +148,9 @@ svg {
             }
     
             & button {
-                margin-top: 5px;
-                width: 300px;
-                padding: 23px 23px;
+                margin-top: 0px;
+                width: 260px;
+                padding: 17px 23px;
                 text-align: center;
                 font: normal normal normal 20px/36px Poppins;
                 letter-spacing: 0px;
@@ -135,6 +158,32 @@ svg {
                 background: #007DFB 0% 0% no-repeat padding-box;
                 border-radius: 62px;
                 border: none;
+            }
+        }
+
+        &__close {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 25px;
+            right: 35px;
+            z-index: 10;
+        
+            & > span {
+                display: block;
+                position: absolute;
+                top: 18px;
+                width: 40px;
+                height: 3px;
+                background-color: $blue;
+    
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+    
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
             }
         }
 
@@ -149,19 +198,4 @@ svg {
             transform: rotate(0deg);
         }
     }
-
-    // svg {
-
-    //     width: 50vw;
-    //     height: 50vh;
-    //     transform: rotate(-90deg);
-
-    //     & image {
-    //         transform: rotate(-90deg);
-    //         width: 100vw;
-    //         x: 0;
-    //     }
-        
-    // }
-
 }
