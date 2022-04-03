@@ -46,12 +46,22 @@
     max-height: 10rem;
     overflow-y: auto;
     z-index: 2;
-    padding: 14px 18px;
+    background-color: $gray_01;
+    padding: 24px 18px;
     border: 1px solid #FFFFFF73;
     border-radius: 42px;
-    opacity: 1;
+    // opacity: 0.7;
     backdrop-filter: blur(20px);
-    
+
+    &::-webkit-scrollbar {
+      height: 100px;
+      width: 13px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      box-shadow: inset 5px 0 0 $ligth-gray;
+    }
   }
   
   .select_show .select__dropdown {
@@ -74,7 +84,7 @@
   }
   
   .select__option {
-    padding: 10px 0px;
+    padding-bottom: 10px;
   }
   
   .select__option_selected {
@@ -82,6 +92,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 145px;
     color: #5271F3;
     text-shadow: 0px 0px 5px #FFFFFF;
   }
@@ -90,6 +101,7 @@
     content: '';
     width: 0.75rem;
     height: 0.75rem;
+    margin-left: 1rem;
     color: #5271F3;
     background-size: cover;
     background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="100" width="100" class="svg-inline--fa fa-check fa-w-16" data-icon="check" data-prefix="fas" aria-hidden="true"%3E%3Cpath d="M33.964 85.547l-32.5-32.251a4.935 4.935 0 010-7.017l7.071-7.017a5.027 5.027 0 017.071 0L37.5 60.987l46.894-46.534a5.028 5.028 0 017.07 0l7.072 7.017a4.935 4.935 0 010 7.017l-57.5 57.06a5.027 5.027 0 01-7.072 0z" fill="%230277bd"/%3E%3C/svg%3E');
@@ -97,7 +109,14 @@
   
   .select__option:hover {
     background-color: transparent;
-    color: #5271F37F;
+    color: $white;
+    text-shadow: 0px 0px 5px #FFFFFF;
     cursor: pointer;
-    transition: 0.2s background-color ease-in-out;
+  }
+
+  @media (max-width: 1020px) {
+
+    .select__dropdown {
+      top: -13rem;
+    }
   }
