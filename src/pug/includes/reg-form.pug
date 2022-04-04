@@ -9,12 +9,23 @@
     h2.registration__heading Registration form
     form.registration__form(action="#" method="post") 
         input(type="text" name="name" placeholder="Name")
-        input(type="text" list="country" placeholder="Country")
-        datalist(id="country")
-          option USA
-          option England
-          option Deutschland
-          option Russia
+        //- input(type="text" list="country" placeholder="Country")
+        div.select.select-country(id="country")
+          button.select__toggle.select-country__toogle(type="button" name="country" value="" data-select="toggle" data-index="-1") Country
+          div.select__dropdown.select-country__dropdown
+              ul.select__options.select-country__options
+                  li.select__option.select-country__option.select__option_selected(data-select="option" data-value="eng" data-index="0") England
+                  li.select__option.select-country__option(data-select="option" data-value="txt" data-index="1") Text
+                  li.select__option.select-country__option(data-select="option" data-value="rus" data-index="2") Russian
+                  li.select__option.select-country__option(data-select="option" data-value="txt" data-index="3") Text
+                  li.select__option.select-country__option(data-select="option" data-value="ua" data-index="4") Ukrainian
+                  li.select__option.select-country__option(data-select="option" data-value="txt" data-index="5") Text
+                  li.select__option.select-country__option(data-select="option" data-value="bu" data-index="6") Belorussian
+                  li.select__option.select-country__option(data-select="option" data-value="txt" data-index="7") Text
+                  li.select__option.select-country__option(data-select="option" data-value="txt" data-index="8") Text
+                  li.select__option.select-country__option(data-select="option" data-value="txt" data-index="9") Text
+                  li.select__option.select-country__option(data-select="option" data-value="txt" data-index="10") Text
+                  li.select__option.select-country__option(data-select="option" data-value="txt" data-index="11") Text
         input(type="email", name="email" placeholder="Email")
         input(type="tel", name="tel" placeholder="Phone")
         button(type="submit") Registration

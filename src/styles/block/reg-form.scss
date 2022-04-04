@@ -95,7 +95,7 @@
             }   
         }
 
-        & button {
+        & > button {
             margin-top: 65px;
             width: 332px;
             padding: 43.5px 80px;
@@ -147,7 +147,7 @@ svg {
                 outline: none;
             }
     
-            & button {
+            & > button {
                 margin-top: 0px;
                 width: 260px;
                 padding: 17px 23px;

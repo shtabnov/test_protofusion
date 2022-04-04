@@ -140,3 +140,12 @@ document.addEventListener('click', (e) => {
     });
   }
 });
+
+
+
+
+
+// Инициализация меню выбора
+
+const language = new CustomSelect('#language');
+const country = new CustomSelect('#country');

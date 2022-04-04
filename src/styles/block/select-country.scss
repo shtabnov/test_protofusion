@@ -1,0 +1,95 @@
+.select-country {
+    position: relative;
+    width: 100%;
+
+    &__toogle {
+        padding: 21px 48px; 
+        margin-bottom: 20px;
+        text-align: left;
+        font: normal normal normal 25px/38px Poppins;
+        letter-spacing: 0px;
+        color: $gray;
+        background: $white-gray 0% 0% no-repeat padding-box;
+        border-radius: 52px;
+        border: none;
+        outline: none;
+
+        &:focus {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    &__dropdown {
+        top: 65px;
+        left: 0rem;
+        right: 0rem;
+        width: 550px;
+        max-height: 12rem;
+
+        background-color: $white-gray;
+        padding: 24px 45px;
+        border: none;
+        border-radius: 0px;
+        backdrop-filter: blur(20px);
+    
+        &::-webkit-scrollbar {
+          height: 100px;
+          width: 12px;
+          background-color: transparent;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+          box-shadow: inset 5px 0 0 $ligth-gray;
+        }
+    }
+
+    &__options {
+        width: fit-content;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font: normal normal normal 20px/30px Poppins;
+        letter-spacing: 0px;
+        color: #242424;
+        opacity: 0.78;
+
+        :hover {
+            background-color: transparent;
+            color: #808080;
+            text-shadow: 0px 0px 5px #FFFFFF;
+            cursor: pointer;
+          }
+    }
+}
+
+@media (max-width: 1020px) {
+    
+    .select-country {
+        width: calc(70vw + 56px);
+        display: flex;
+        
+
+        &__toogle {
+            margin: 0;
+            padding: 13px 28px; 
+            margin-bottom: 20px;
+            font: normal normal normal 15px/38px Poppins;
+            letter-spacing: 0px;
+            color: $gray;
+            background: $white-gray 0% 0% no-repeat padding-box;
+            border-radius: 52px;
+            border: none;
+            outline: none;
+        }
+
+        &__dropdown {
+            width: 70vw;
+            padding: 13px 28px; 
+            margin-bottom: 20px;
+            text-align: left;
+            font: normal normal normal 15px/38px Poppins;
+            letter-spacing: 0px;
+        }
+    }
+}

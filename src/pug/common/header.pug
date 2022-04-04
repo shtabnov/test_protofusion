@@ -36,7 +36,22 @@ header.header
                 .header__control
                     button.header__button Log in
                     .header__select
-                        include ../includes/language.pug
+                        div.select(id="language")
+                            button(type="button" class="select__toggle" name="language" value="eng" data-select="toggle" data-index="0") English
+                            div.select__dropdown
+                                ul.select__options
+                                    li.select__option.select__option_selected(data-select="option" data-value="eng" data-index="0") English
+                                    li.select__option(data-select="option" data-value="txt" data-index="1") Text
+                                    li.select__option(data-select="option" data-value="rus" data-index="2") Russian
+                                    li.select__option(data-select="option" data-value="txt" data-index="3") Text
+                                    li.select__option(data-select="option" data-value="ua" data-index="4") Ukrainian
+                                    li.select__option(data-select="option" data-value="txt" data-index="5") Text
+                                    li.select__option(data-select="option" data-value="bu" data-index="6") Belorussian
+                                    li.select__option(data-select="option" data-value="txt" data-index="7") Text
+                                    li.select__option(data-select="option" data-value="txt" data-index="8") Text
+                                    li.select__option(data-select="option" data-value="txt" data-index="9") Text
+                                    li.select__option(data-select="option" data-value="txt" data-index="10") Text
+                                    li.select__option(data-select="option" data-value="txt" data-index="11") Text
                     .header__search-button
                     .header__search.search
                         input.search__form(type="text" name="search" placeholder="Search")
