@@ -1,6 +1,6 @@
 header.header
     .header__wrapper 
-        a.header__logo(href="#")
+        a.header__logo(href="/index.html")
             img(src="images/logo.svg", alt="Logo Company")
         .header__menu
             input(id="toggle" type="checkbox")
@@ -12,7 +12,7 @@ header.header
                 nav.header__nav 
                     ul.header__list 
                         li.header__item 
-                            a(href="#Products").header__link.link Products
+                            a(href="/product.html").header__link.link Products
                         li.header__item 
                             a(href="#Prices").header__link.link Prices
                         li.header__item 
@@ -33,9 +33,9 @@ header.header
                                     li.resources__item 
                                         a.resources__link(href="#") Blog
                                         p.resources__decription Aroduct announcements, company updates, and industry perspectives.
-                .header__control
-                    button.header__button Log in
-                    .header__select
+                .header__control.control
+                    button.control__button Log in
+                    .control__select
                         div.select(id="language")
                             button(type="button" class="select__toggle" name="language" value="eng" data-select="toggle" data-index="0") English
                             div.select__dropdown
@@ -52,7 +52,7 @@ header.header
                                     li.select__option(data-select="option" data-value="txt" data-index="9") Text
                                     li.select__option(data-select="option" data-value="txt" data-index="10") Text
                                     li.select__option(data-select="option" data-value="txt" data-index="11") Text
-                    .header__search-button
-                    .header__search.search
+                    .control__search-button
+                    .control__search.search
                         input.search__form(type="text" name="search" placeholder="Search")
                         button.search__button(type="submit")

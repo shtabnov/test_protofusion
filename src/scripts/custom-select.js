@@ -1,3 +1,4 @@
+//- https://itchief.ru/javascript/custom-select
 const CLASS_NAME_SELECT = 'select';
 const CLASS_NAME_ACTIVE = 'select_show';
 const CLASS_NAME_SELECTED = 'select__option_selected';
@@ -146,6 +147,9 @@ document.addEventListener('click', (e) => {
 
 
 // Инициализация меню выбора
+if (document.getElementById('#language') &&
+    document.getElementById('#country')) {
+      const language = new CustomSelect('#language');
+      const country = new CustomSelect('#country');
+}
 
-const language = new CustomSelect('#language');
-const country = new CustomSelect('#country');

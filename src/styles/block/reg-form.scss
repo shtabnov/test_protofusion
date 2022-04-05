@@ -112,7 +112,7 @@
 
 svg {
     width: 38vw;
-    height: 100vh;
+    height: calc(100vh - 7px);
 
     & image {
         width: 100vw;

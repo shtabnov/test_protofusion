@@ -1,0 +1,133 @@
+.slider {
+
+    &__container {
+        margin: 0 auto;
+    }
+
+    &__heading {
+        padding-top: 44px;
+        padding-bottom: 14px;
+        text-align: center;
+        font: normal normal 600 35px/53px Poppins;
+        letter-spacing: 0px;
+        color: #007DFB;
+        text-transform: uppercase;
+    }
+}
+
+.swiper{
+    width: 750px;
+    height: 590px;
+       
+    &-pagination {
+        position: relative;
+
+        &-bullet {
+            width: 28px;
+            height: 28px;
+            border: none;
+            background: none;
+            font: normal normal normal 18px/27px Poppins;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+    
+            &-active {
+                outline: 1px solid #007DFB;
+            }
+        }
+    }
+
+
+    &-button {
+
+        &-prev {
+            top: 720px;
+            left: calc(50% - 120px);
+            width: 7px;
+            height: 11px;
+
+            &::after {
+                font-size: 11px;
+                color: #707070;
+            }
+        }
+
+        &-next {
+            top: 720px;
+            right: calc(50% - 120px);
+            width: 7px;
+            height: 11px;
+
+            &::after {
+                font-size: 11px;
+                color: #707070;
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+
+    .swiper{
+        width: 100vw;
+        height: auto;
+        
+        &-slide {
+
+            & img {
+                width: 100%;
+            }
+        }
+
+        &-pagination {
+            position: relative;
+    
+            &-bullet {
+                width: 8px;
+                height: 8px;
+                border: none;
+                background: $violet;
+                font: normal normal normal 0px/27px Poppins;
+                letter-spacing: 0px;
+                color: #000000;
+                opacity: 0.5;
+        
+                &-active {
+                    outline: none;
+                    opacity: 1;
+                }
+            }
+        }
+        
+    
+        &-button {
+    
+            &-prev {
+                display: none;
+                top: 0px;
+                left: 50%;
+                width: 7px;
+                height: 11px;
+    
+                &::after {
+                    font-size: 11px;
+                    color: #707070;
+                }
+            }
+    
+            &-next {
+
+                top: 25%;
+                right: 10%;
+                width: 7px;
+                height: 11px;
+    
+                &::after {
+                    font-size: 11px;
+                    color: #707070;
+                }
+            }
+        }
+    }
+}
