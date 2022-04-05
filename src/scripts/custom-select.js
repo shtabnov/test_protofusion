@@ -147,8 +147,8 @@ document.addEventListener('click', (e) => {
 
 
 // Инициализация меню выбора
-if (document.getElementById('#language') &&
-    document.getElementById('#country')) {
+if (document.getElementById('language') &&
+    document.getElementById('country')) {
       const language = new CustomSelect('#language');
       const country = new CustomSelect('#country');
 }

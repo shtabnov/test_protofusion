@@ -16,7 +16,7 @@
 }
 
 .swiper{
-    width: 750px;
+    width: 746px;
     height: 590px;
        
     &-pagination {
@@ -69,6 +69,26 @@
 
 @media (max-width: 760px) {
 
+    .slider {
+        position: relative;
+        height: 100vh;
+
+        &__container {
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
+        }
+    
+        &__heading {
+            padding-bottom: 14px;
+            text-align: center;
+            font: normal normal 600 25px/53px Poppins;
+            letter-spacing: 0px;
+            color: $blue;
+            text-transform: uppercase;
+        }
+    }
+
     .swiper{
         width: 100vw;
         height: auto;
@@ -76,21 +96,24 @@
         &-slide {
 
             & img {
-                width: 100%;
+                width: 120%;
+            }
+
+            &-next {
+                filter: blur(2px);
             }
         }
 
         &-pagination {
             position: relative;
-    
+            margin-top: 20px;
+
             &-bullet {
                 width: 8px;
                 height: 8px;
                 border: none;
                 background: $violet;
                 font: normal normal normal 0px/27px Poppins;
-                letter-spacing: 0px;
-                color: #000000;
                 opacity: 0.5;
         
                 &-active {
@@ -105,27 +128,22 @@
     
             &-prev {
                 display: none;
-                top: 0px;
-                left: 50%;
-                width: 7px;
-                height: 11px;
-    
-                &::after {
-                    font-size: 11px;
-                    color: #707070;
-                }
             }
     
             &-next {
 
-                top: 25%;
+                top: 45%;
                 right: 10%;
-                width: 7px;
-                height: 11px;
+                width: 30px;
+                height: 25px;
     
                 &::after {
+                    content: '';
+                    width: 30px;
+                    height: 25px;
+                    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="25"><path d="M24.31 10.833l-7.988-7.988A1.667 1.667 0 1118.679.488l10.833 10.834a1.667 1.667 0 010 2.357L18.678 24.512a1.667 1.667 0 11-2.357-2.357l7.989-7.988H1.667a1.667 1.667 0 010-3.333z" fill="%235271F3"/%3E%3C/svg%3E');
                     font-size: 11px;
-                    color: #707070;
+                    color: $violet;
                 }
             }
         }
