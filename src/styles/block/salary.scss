@@ -115,13 +115,14 @@
 
 @media (max-width: 760px) {
     .salary {
-        padding: 0 0;
+        padding: 20px 0;
         background-image: none;
         background-color: $white-gray;
     
         &__contanier {
-            width: auto;
-            margin: 0 10px;
+            max-width: 434px;
+            margin: 0 auto;
+            padding: 0 10px;
         }
     
         &__title {
@@ -145,9 +146,10 @@
             flex-direction: column-reverse;
             align-items: center;
             margin-top: 17px;
+            margin-bottom: 35px;
 
             & img {
-                width: 70vw;
+                width: 390px;
                 clip-path: url("#salary_path");
             }
     
@@ -159,15 +161,15 @@
                 }
     
                 & .features__text {
-                    padding-left: 40px;
+                    padding-left: 20px;
                     padding-right: 15px;
                 }
             }
         }
     
         &__text {
-            padding-top: 50px;
-            padding-left: 52.5px;
+            padding-top: 30px;
+            padding-left: 20px;
         }
     
         &__title {
