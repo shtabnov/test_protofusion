@@ -1,0 +1,48 @@
+.security {
+
+    &__contanier {
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        font: normal normal 600 35px/53px Poppins;
+        letter-spacing: 0px;
+        color: $blue;
+        text-transform: uppercase;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__item {
+        width: 555px;
+        height: 472px;
+
+        &:nth-child(1) {
+            background: transparent url('../images/security_1.png') 0% 0% no-repeat padding-box;
+            border: 1px solid #E1E1E1;
+            border-radius: 17px;
+        }
+
+        &:nth-child(2) {
+            background: transparent url('../images/security_2.png') 0% 0% no-repeat padding-box;
+            border-radius: 17px;
+        }
+
+        &:nth-child(3) {
+            background: $white-gray url('../images/security_3.png') 0% 0% no-repeat padding-box;
+            mix-blend-mode: multiply;
+            border-radius: 17px;
+        }
+
+        &:nth-child(4) {
+            background: transparent url('../images/security_4.png') 0% 0% no-repeat padding-box;
+            border: 1px solid #E1E1E1;
+            border-radius: 17px;
+        }
+    }
+}
