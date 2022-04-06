@@ -5,7 +5,7 @@ section.salary
         .salary__features.features 
             .features__item 
                 .features__text
-                    h3.features__title Enjoy payday brought to you a day sooner
+                    h3.features__title Enjoy payday brought to&nbsp;you a&nbsp;day sooner
                     p.features__description Just switch your salary from your current bank to Revolut by simply sending a ready-made email
                     a.features__link Get started
                 img.features__img(src="images/salary_img1.png", alt="get paid")
@@ -21,8 +21,12 @@ section.salary
                     p.features__description Forget manual set-ups or confirmations. Once your salary's switched to Revolut, you'll just get your money a day early
                     a.features__link Get started
                 img.features__img(src="images/salary_img3.png", alt="no hassle")
-<svg class="svg">
-  <clipPath id="salary_path" clipPathUnits="objectBoundingBox">
-    <path transform="matrix(-1, 0, 0, 1, 0, 0)" d="M0.189,0 H1 V0.809 a0.189,0.191,0,0,1,-0.189,0.191 H0 V0.191 A0.189,0.191,0,0,1,0.189,0"/>
-  </clipPath>
-</svg>
+svg(height="0" width="0" class="maskItem")
+    defs
+        clipPath(id="salary_path")
+            path(d="M90,0H476V382a90,90,0,0,1-90,90H0V90A90,90,0,0,1,90,0Z")
+    defs
+        clipPath(id="salary_path_rotate")
+            path(transform="rotate(90) translate(-0, -470)" d="M90,0H476V382a90,90,0,0,1-90,90H0V90A90,90,0,0,1,90,0Z")
+
+    

@@ -1,4 +1,5 @@
 .salary {
+    padding: 50px 0;
     background-image: url('../images/hero_salary.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,11 +10,15 @@
     height: 100%;
 
     &__contanier {
-        max-width: 951px;
+        max-width: 1003.5px;
         margin: 0 auto;
     }
 
     &__title {
+        width: 312px;
+        margin: 0 auto;
+        padding-top: 79px;
+        padding-bottom: 30px;
         text-align: center;
         font: normal normal 600 35px/53px Poppins;
         letter-spacing: 0px;
@@ -22,6 +27,7 @@
     }
 
     &__subtitle {
+        padding-bottom: 60px;
         text-align: center;
         font: normal normal medium 22px/33px Poppins;
         letter-spacing: 0px;
@@ -33,19 +39,43 @@
     
     &__item {
         display: flex;
+        margin-top: 17px;
+
+        
+        & img {
+            clip-path: url("#salary_path");
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+
+            & img {
+                clip-path: url("#salary_path_rotate");
+            }
+
+            & .features__text {
+                padding-left: 40px;
+                padding-right: 15px;
+            }
+        }
     }
 
     &__text {
-        padding: 50px 52.5px;
+        padding-top: 50px;
+        padding-left: 52.5px;
     }
 
     &__title {
+        max-width: 371px;
+        height: 78px;
+        margin-bottom: 21px;
         text-align: left;
         font: normal normal 500 30px/35px Poppins;
         letter-spacing: 0px;
     }
 
     &__description {
+        margin-bottom: 130px;
         text-align: left;
         font: normal normal normal 22px/28px Poppins;
         letter-spacing: 0px;
@@ -54,16 +84,142 @@
 
     &__link {
         text-align: left;
-        font: normal normal medium 18px/35px Poppins;
+        font: normal normal 500 18px/35px Poppins;
         letter-spacing: 0px;
         color: $blue;
-    }
 
-    &__img {
-        clip-path: url("#salary_path");
+        &:hover {
+            position: relative;
+            left: -20px;
+            color: $white;
+            padding: 10px 63px 10px 20px;
+            background: $blue 0% 0% no-repeat padding-box;
+            border-radius: 23px;
+
+            &::after {
+                position: absolute;
+                top: calc(50% - 8px);
+                right: 22px;
+                content: "";
+                width: 20px;
+                height: 16px;
+                background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="25"><path transform="scale(0.65)" d="M24.31 10.833l-7.988-7.988A1.667 1.667 0 1118.679.488l10.833 10.834a1.667 1.667 0 010 2.357L18.678 24.512a1.667 1.667 0 11-2.357-2.357l7.989-7.988H1.667a1.667 1.667 0 010-3.333z" fill="%23FFFFFF"/%3E%3C/svg%3E');
+            }
+        }
     }
 }
 
-.svg {
+.maskItem {
     height: 0;
 }
+
+@media (max-width: 760px) {
+    .salary {
+        padding: 0 0;
+        background-image: none;
+        background-color: $white-gray;
+    
+        &__contanier {
+            width: auto;
+            margin: 0 10px;
+        }
+    
+        &__title {
+            width: 230px;
+            margin: 0 auto;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            font: normal normal 600 25px/33px Poppins;
+        }
+    
+        &__subtitle {
+            padding-bottom: 30px;
+            font: normal normal medium 16px/23px Poppins;
+        }
+    }
+
+    .features {
+    
+        &__item {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-top: 17px;
+
+            & img {
+                width: 70vw;
+                clip-path: url("#salary_path");
+            }
+    
+            &:nth-child(even) {
+                flex-direction: column-reverse;
+    
+                & img {
+                    clip-path: url("#salary_path_rotate");
+                }
+    
+                & .features__text {
+                    padding-left: 40px;
+                    padding-right: 15px;
+                }
+            }
+        }
+    
+        &__text {
+            padding-top: 50px;
+            padding-left: 52.5px;
+        }
+    
+        &__title {
+            max-width: 371px;
+            height: auto;
+            margin-bottom: 21px;
+            text-align: left;
+            font: normal normal 500 30px/35px Poppins;
+            letter-spacing: 0px;
+        }
+    
+        &__description {
+            margin-bottom: 30px;
+            text-align: left;
+            font: normal normal normal 22px/28px Poppins;
+            letter-spacing: 0px;
+            color: $gray;
+        }
+    
+        &__link {
+            text-align: left;
+            font: normal normal 500 18px/35px Poppins;
+            letter-spacing: 0px;
+            color: $blue;
+    
+            &:hover {
+                position: relative;
+                left: -20px;
+                color: $white;
+                padding: 10px 63px 10px 20px;
+                background: $blue 0% 0% no-repeat padding-box;
+                border-radius: 23px;
+    
+                &::after {
+                    position: absolute;
+                    top: calc(50% - 8px);
+                    right: 22px;
+                    content: "";
+                    width: 20px;
+                    height: 16px;
+                    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="25"><path transform="scale(0.65)" d="M24.31 10.833l-7.988-7.988A1.667 1.667 0 1118.679.488l10.833 10.834a1.667 1.667 0 010 2.357L18.678 24.512a1.667 1.667 0 11-2.357-2.357l7.989-7.988H1.667a1.667 1.667 0 010-3.333z" fill="%23FFFFFF"/%3E%3C/svg%3E');
+                }
+            }
+        }
+    }
+
+    #salary_path, #salary_path_rotate {
+        
+        & path {
+            transform: scale(0.8);
+        }
+    }
+}
+
+
