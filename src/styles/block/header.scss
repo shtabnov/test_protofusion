@@ -408,7 +408,7 @@
             justify-content: space-between;
             background: #FFFFFF7F 0% 0% no-repeat padding-box;
             backdrop-filter: blur(50px);
-
+            -webkit-backdrop-filter: blur(50px);
         }
     
         &__logo {
