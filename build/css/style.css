@@ -458,64 +458,6 @@ a:hover {
     cursor: pointer;
   }
 
-  .choices {
-    flex: 0 1 auto;
-    width: 114px;
-    margin: 0;
-    margin-right: 5px;
-  }
-  .choices__inner {
-    padding-bottom: 0;
-    border: none;
-    background: transparent;
-    font: normal normal normal 20px/33px Poppins;
-    letter-spacing: 0px;
-    color: #707070;
-  }
-  .choices .choices__list--dropdown, .choices .choices__list[aria-expanded] {
-    box-sizing: border-box;
-    padding-top: 24px;
-    padding-left: 18px;
-    width: 176px;
-    background: #ACACAC63 0% 0% no-repeat padding-box;
-    border: 1px solid #FFFFFF73;
-    border-radius: 42px;
-    backdrop-filter: blur(20px);
-    right: -50%;
-  }
-  .choices .choices__list--dropdown .choices__item--selectable, .choices .choices__list[aria-expanded] .choices__item--selectable {
-    padding-right: 0px;
-    padding-top: 0;
-    font: normal normal normal 20px/33px Poppins;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-  }
-  .choices .choices__list--dropdown .choices__item--selectable:hover, .choices .choices__list[aria-expanded] .choices__item--selectable:hover {
-    color: #5271F3;
-    text-shadow: 0px 0px 5px #FFFFFF;
-  }
-  .choices .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
-    background-color: transparent;
-  }
-  .choices[data-type*=select-one]::after {
-    content: url("../images/arrow_n.svg");
-    border-style: none;
-    border-width: 0;
-    right: 20px;
-    top: 29%;
-    margin-top: 0;
-  }
-  .choices[data-type*=select-one].is-open::after {
-    content: url("../images/arrow_n.svg");
-    border-style: none;
-    border-width: 0;
-    right: 0;
-    top: 60%;
-    margin-top: 0;
-    transform: rotate(180deg);
-    transition: 10ms;
-  }
-
   .search {
     position: relative;
     transform: scale(0);
@@ -569,6 +511,7 @@ a:hover {
     border: none;
     border-radius: 0px;
     backdrop-filter: none;
+    background-color: transparent;
   }
   .resources__item {
     text-align: left;
