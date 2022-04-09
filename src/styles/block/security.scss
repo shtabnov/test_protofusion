@@ -210,10 +210,18 @@
             &:nth-child(2) {
                 background-image: none;
                 background-color: $white-gray;
+
+                &:hover {
+                    color: inherit;
+                }
             }
             &:nth-child(3) {
                 background-image: none;
                 background-color: transparent;
+                
+                &:hover {
+                    color: inherit;
+                }
             }
             &:nth-child(4) {
                 background-image: none;
@@ -224,6 +232,13 @@
                 }
             }
 
+            &:hover {
+
+                & .cards__filter {
+                    height: 0;
+                }
+
+            }
         }
 
         &__title {
@@ -241,6 +256,5 @@
         &__link {
             display: none;
         }
-
     }
 }
