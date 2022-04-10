@@ -31,11 +31,11 @@ a:hover {
 @media (max-width: 1020px) {
   .background {
     background-image: url("../images/fon.png");
-    background-size: 100%;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: 10% 0%;
     width: 100%;
-    height: auto;
+    height: 100vh;
   }
 }
 .header {
