@@ -528,14 +528,14 @@
         position: absolute;
         top: 210px;
         left: 50%;
-        transform: translate(-50%);
+        transform: translate(50%);
         transition: 0.3s;
+        background-color: transparent;
     
         &__list {
             display: block;
             list-style: none;
             padding: 0;
-            // background: none;
             box-shadow: none;
             border: none;
             border-radius: 0px;

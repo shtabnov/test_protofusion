@@ -489,8 +489,9 @@ a:hover {
     position: absolute;
     top: 210px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(50%);
     transition: 0.3s;
+    background-color: transparent;
   }
   .resources__list {
     display: block;
