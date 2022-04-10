@@ -291,15 +291,6 @@
             cursor: pointer;
         }
     }
-    .choices {
-        width: 94px;
-        margin: 0;
-        margin-right: 26px;
-    
-        &__inner {
-            font: normal normal normal 16px/33px Poppins;
-        }
-    }
     .search {
         position: relative;
         transform: scale(0);
@@ -544,7 +535,7 @@
             display: block;
             list-style: none;
             padding: 0;
-            background: none;
+            // background: none;
             box-shadow: none;
             border: none;
             border-radius: 0px;
